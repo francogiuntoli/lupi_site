@@ -104,7 +104,7 @@ export default function Navbar() {
                         <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-green-200 ring-opacity-5  dark:ring-2 dark:ring-white">
                           <div className="relative grid gap-6 bg-white px-5 py-6 dark:bg-zinc-900 dark:ring-2  sm:gap-8 sm:px-5 sm:py-4">
                             {consultas.map((item) => {
-                              if (item.href !== "/recetario") {
+                              if (item.name !== "Recetario") {
                                 return (
                                   <Link
                                     onClick={() => close()}
@@ -118,10 +118,9 @@ export default function Navbar() {
                               } else {
                                 return (
                                   <Link
-                                    onClick={() => close()}
                                     key={item.name}
                                     href={item.href}
-                                    className="hover:text-semibold pointer-events-none flex gap-2 rounded-md p-3 text-base font-medium text-gray-200 hover:bg-gray-200 hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-8 dark:text-white dark:hover:text-gray-500 dark:hover:decoration-white"
+                                    className="hover:text-semibold pointer-events-none flex gap-2 rounded-md p-3 text-base font-medium text-gray-500 hover:bg-gray-200 hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-8 dark:hover:text-gray-500 dark:hover:decoration-white"
                                   >
                                     {item.name}
                                     <AiOutlineHighlight size={20} />
