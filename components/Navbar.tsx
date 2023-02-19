@@ -8,7 +8,7 @@ import Link from "next/link";
 import DarkModeButton from "./DarkModeButton";
 import MobileDarkModeButton from "./MobileDarkModeButton";
 import LogoMain from "./LogoMain";
-import { AiOutlineHighlight } from "react-icons/ai";
+import { AiFillTool } from "react-icons/ai";
 
 const consultas = [
   {
@@ -120,10 +120,13 @@ export default function Navbar() {
                                   <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="hover:text-semibold pointer-events-none flex gap-2 rounded-md p-3 text-base font-medium text-gray-500 hover:bg-gray-200 hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-8 dark:hover:text-gray-500 dark:hover:decoration-white"
+                                    className="hover:text-semibold pointer-events-none flex items-center gap-2 rounded-md p-3 text-base font-medium text-gray-300 hover:bg-gray-200 hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-8 dark:text-gray-600/80 dark:hover:text-gray-500 dark:hover:decoration-white"
                                   >
                                     {item.name}
-                                    <AiOutlineHighlight size={20} />
+                                    <AiFillTool
+                                      className="text-green-200"
+                                      size={20}
+                                    />
                                   </Link>
                                 );
                               }
@@ -162,7 +165,7 @@ export default function Navbar() {
       >
         <Popover.Panel
           focus
-          className="absolute top-14 right-8 z-[10000] w-[65%] origin-top-right transform p-2 transition md:hidden"
+          className="absolute top-14 right-8 z-[10000] w-[85%] origin-top-right transform p-2 transition md:hidden"
         >
           {({ close }) => (
             <div className="rounded-lg bg-white shadow-lg ring-1 ring-green-500/50 ring-opacity-5 dark:bg-zinc-900 dark:ring-white">
@@ -219,11 +222,11 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/recetario"
-                    className="pointer-events-none flex gap-2 border-l-2 border-b-2 border-green-200 p-2  text-base font-medium text-gray-300  hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-8 dark:text-white/30"
+                    className="pointer-events-none flex items-center gap-2 border-l-2 border-b-2 border-green-200 p-2  text-base font-medium text-gray-300  hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-8 dark:text-white/30"
                     onClick={() => close()}
                   >
                     Recetario
-                    <AiOutlineHighlight size={20} />
+                    <AiFillTool className="text-green-200" size={20} />
                   </Link>
                 </div>
                 <div
