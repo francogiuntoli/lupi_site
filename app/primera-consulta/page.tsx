@@ -10,7 +10,7 @@ export default function PrimeraConsulta() {
         <div className="w-[70%]">
           <ul className="text-gray-700">
             <h1 className="text-2xl text-green-400 underline decoration-green-400 decoration-2 underline-offset-8 dark:text-green-200 dark:decoration-green-200">
-              Consiste de:
+              Que incluye?:
             </h1>
             <li className="my-4 font-semibold text-gray-700 dark:text-white ">
               Una consulta por zoom de aprox. 40 min
