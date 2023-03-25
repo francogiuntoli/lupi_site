@@ -7,7 +7,7 @@ function GuiaInicial() {
         Guía Inicial
       </h1>
       <div className="m-auto mb-5 flex w-[90%] justify-center rounded-lg border-2 border-green-200 border-opacity-50 p-10 text-center text-gray-700 shadow-2xl dark:bg-zinc-800 dark:text-white sm:mb-0 md:w-[65%] lg:w-[50%]">
-        <div className="max-w-[75%]">
+        <div className="w-full sm:w-[80%]">
           <ul className="text-gray-700">
             <li className="my-4 font-semibold text-gray-700 dark:text-white ">
               Es una guía básica destinada a quienes quieran empezar a
@@ -26,14 +26,14 @@ function GuiaInicial() {
             <h1 className="text-2xl  text-gray-700 underline decoration-green-400 decoration-2 underline-offset-8 dark:text-green-200 dark:decoration-green-200">
               Precios:
             </h1>
-            <li className="my-4 font-semibold text-gray-700 dark:text-white ">
+            <ul className="my-4 font-semibold text-gray-700 dark:text-white ">
               Argentina: $1750 ARS
               <li>Se realiza el pago via transferencia bancaria</li>
-            </li>
-            <li className="my-4 font-semibold text-gray-700 dark:text-white ">
+            </ul>
+            <ul className="my-4 font-semibold text-gray-700 dark:text-white ">
               Resto del mundo: €12 EUR
               <li>Se realiza el pago via Paypal</li>
-            </li>
+            </ul>
           </ul>
         </div>
       </div>
