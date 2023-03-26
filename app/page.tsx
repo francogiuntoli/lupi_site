@@ -6,11 +6,9 @@ export default async function Homepage() {
     <>
       <div className="mx-auto mt-2 flex max-w-[95%] flex-col items-center">
         <div className="mx-auto flex flex-col items-center rounded-xl border-green-200/20 bg-gradient-to-r from-white via-green-200 to-white drop-shadow-xl dark:border-t dark:bg-gradient-to-r dark:from-zinc-900 dark:via-green-200/[20%] dark:to-zinc-900 dark:shadow-2xl dark:shadow-white/50 md:max-w-[80%] lg:max-w-[50%]">
-          <Image
-            className="h-75 w-75 mt-10 select-none rounded-3xl object-cover ring-2 ring-green-200"
+          <img
+            className="w-70 mt-10 h-64 select-none rounded-full rounded-tr-none object-cover ring-2 ring-green-200"
             src="/images/chaquetilla.png"
-            width="325"
-            height="325"
             alt="profile image"
           />
           <div className="md:w-[85%] lg:w-[60%]">
