@@ -21,7 +21,7 @@ export default function Contacto() {
             height="350"
             alt="profile main"
           />
-          <ul>
+          <ul className="flex flex-col space-y-3 sm:space-y-5">
             <li>
               <Link
                 href="http://instragram.com/marconinutri/"
