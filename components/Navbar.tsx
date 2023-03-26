@@ -36,7 +36,7 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
   return (
     <Popover className="relative z-[10000] select-none rounded-b-xl bg-green-200  shadow-xl dark:bg-transparent dark:shadow-white/5">
-      <div className="mx-auto max-w-7xl  px-6">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between py-6 md:justify-start">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
@@ -139,6 +139,12 @@ export default function Navbar() {
                 </>
               )}
             </Popover>
+            <Link
+              href="/contacto"
+              className="hover:text-semibold text-base font-medium text-gray-500 hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-8 dark:text-white dark:hover:decoration-green-200"
+            >
+              Contacto
+            </Link>
           </Popover.Group>
 
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
@@ -165,7 +171,7 @@ export default function Navbar() {
       >
         <Popover.Panel
           focus
-          className="absolute top-14 right-8 z-[10000] w-[85%] origin-top-right transform p-2 transition md:hidden"
+          className="absolute top-14 right-8 z-[10000] w-[335px] origin-top-right transform p-2 transition md:hidden"
         >
           {({ close }) => (
             <div className="rounded-lg bg-white shadow-lg ring-1 ring-green-500/50 ring-opacity-5 dark:bg-zinc-900 dark:ring-white">
@@ -195,6 +201,13 @@ export default function Navbar() {
                     className="select-none rounded-md p-3 text-base font-medium text-gray-600 underline decoration-white decoration-2 underline-offset-8 hover:cursor-pointer hover:rounded-md hover:bg-green-200 hover:decoration-white dark:text-gray-300 dark:hover:text-gray-600 dark:hover:decoration-gray-600"
                   >
                     Sobre mí
+                  </Link>
+                  <Link
+                    onClick={() => close()}
+                    href="/contacto"
+                    className="select-none rounded-md p-3 text-base font-medium text-gray-600 underline decoration-white decoration-2 underline-offset-8 hover:cursor-pointer hover:rounded-md hover:bg-green-200 hover:decoration-white dark:text-gray-300 dark:hover:text-gray-600 dark:hover:decoration-gray-600"
+                  >
+                    Contacto
                   </Link>
                   <div className="border-t-2 border-gray-100 pt-4 text-base font-medium text-gray-700 dark:border-gray-500 dark:text-green-200">
                     Servicios

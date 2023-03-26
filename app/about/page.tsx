@@ -7,7 +7,7 @@ export default function About() {
         Sobre Mí
       </h1>
       <div className="m-auto mb-5 flex w-[90%] justify-center rounded-lg border-2 border-green-200 border-opacity-50 p-10 text-center text-gray-700 shadow-2xl dark:bg-zinc-800 dark:text-white sm:mb-0 md:w-[65%] lg:w-[50%]">
-        <div className="max-w-[75%]">
+        <div className="w-full sm:w-[80%]">
           <div className="flex">
             <Image
               className="m-auto h-60 w-60 select-none rounded-3xl object-cover ring-2 ring-green-200"
