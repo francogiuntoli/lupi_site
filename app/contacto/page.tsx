@@ -38,7 +38,7 @@ export default function Contacto() {
             </li>
             <li>
               <Link
-                href="https://api.whatsapp.com/send?phone=4591690715&text=Hola!%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20planes%20de%20nutrici%C3%B3n"
+                href="https://api.whatsapp.com/send?phone=34604287070&text=Hola!%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20planes%20de%20nutrici%C3%B3n"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center"
@@ -47,7 +47,7 @@ export default function Contacto() {
                   className="cursor-pointer text-gray-600 dark:text-white "
                   size={40}
                 />
-                <span className="ml-2">+45 91 69 07 15</span>
+                <span className="ml-2">+34 604 28 5220</span>
               </Link>
             </li>
             <li>

@@ -31,7 +31,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              href="https://api.whatsapp.com/send?phone=4591690715&text=Hola!%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20planes%20de%20nutrici%C3%B3n"
+              href="https://api.whatsapp.com/send?phone=34604287070&text=Hola!%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20planes%20de%20nutrici%C3%B3n"
               target="_blank"
               rel="noreferrer"
             >
