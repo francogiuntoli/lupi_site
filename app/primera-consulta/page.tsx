@@ -45,7 +45,7 @@ export default function PrimeraConsulta() {
           target="_blank"
           rel="noreferrer"
         >
-          La quiero!
+          Sacar turno!
         </Link>
       </div>
     </div>
