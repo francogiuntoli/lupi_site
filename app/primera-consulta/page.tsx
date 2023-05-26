@@ -41,7 +41,7 @@ export default function PrimeraConsulta() {
       <div>
         <Link
           className="mt-10 flex select-none justify-center rounded-full bg-green-200/60 px-8 py-2 font-medium text-gray-500 shadow-xl hover:border-gray-500 hover:bg-green-200 hover:text-gray-500 dark:bg-green-200 dark:text-gray-500 dark:shadow-2xl dark:shadow-white/50 dark:hover:bg-green-300/50 dark:hover:text-white"
-          href="https://api.whatsapp.com/send?phone=34604287070&text=Hola!%20Me%20gustar%C3%ADa%20adquirir%20un%20primer%20turno"
+          href="https://api.whatsapp.com/send?phone=34604287070&text=Hola%21%20Me%20gustar%C3%ADa%20adquirir%20un%20turno%20para%20primera%20consulta"
           target="_blank"
           rel="noreferrer"
         >
