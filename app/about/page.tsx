@@ -18,17 +18,17 @@ export default function About() {
             />
           </div>
           <ul className=" mt-8 text-gray-700">
-            <li className="my-4 font-semibold text-gray-700 dark:text-white ">
+            <li className="text-md my-4 text-center text-gray-600 dark:text-white ">
               Soy Licenciada en Nutrición desde hace más de 5 años.
             </li>
-            <li className="my-4 font-semibold text-gray-700 dark:text-white ">
+            <li className="text-md my-4 text-center text-gray-600 dark:text-white ">
               Desde que tengo uso de razón, siempre tuve pasión por la cocina.
             </li>
-            <li className="my-4 font-semibold text-gray-700 dark:text-white ">
+            <li className="text-md my-4 text-center text-gray-600 dark:text-white ">
               Desde hace algunos años, me fascina crear recetas saludables,
               basadas en comida real y disminuir el consumo de procesados.
             </li>
-            <li className="my-4 font-semibold text-gray-700 dark:text-white ">
+            <li className="text-md my-4 text-center text-gray-600 dark:text-white">
               Mi objetivo es que vos también te sumes a tener este estilo de
               vida.
             </li>
