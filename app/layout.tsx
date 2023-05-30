@@ -9,9 +9,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html suppressHydrationWarning={true}>
       <head />
-      <body className="flex min-h-[98vh] flex-col justify-between dark:bg-zinc-900">
+      <body className="flex min-h-[98vh] flex-col justify-between  dark:bg-zinc-900">
         <Providers>
           <Header />
           <div>{children}</div>
