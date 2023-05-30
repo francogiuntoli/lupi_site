@@ -41,7 +41,8 @@ export default function GuiaInicial() {
       <div className="mx-auto mt-2 w-min min-w-max">
         <BuyNowButton
           id="Guía Inicial"
-          price={1750}
+          priceMP={1750}
+          pricePP={12}
           message={"La quiero!"}
           redirectUrl="guia-inicial"
         />

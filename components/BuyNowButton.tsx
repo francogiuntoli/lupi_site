@@ -9,15 +9,16 @@ import { AiOutlineDownload } from "react-icons/ai";
 
 export interface BuyNowButtonProps {
   id: string;
-  price: number;
+  priceMP: number;
+  pricePP: number;
   message: string;
   redirectUrl: string;
-  // platform: string;
 }
 
 export default function BuyNowButton({
   id,
-  price,
+  priceMP: price,
+  pricePP,
   message,
   redirectUrl,
 }: BuyNowButtonProps) {
@@ -39,7 +40,7 @@ export default function BuyNowButton({
         setUrlMP(preferences.url);
         setLoading(false);
       } catch (error) {
-        console.error(error);
+        console.error("error", error);
         setLoading(true);
       }
     };
@@ -83,7 +84,7 @@ export default function BuyNowButton({
               <PayPalScriptProvider
                 options={{
                   "client-id":
-                    "AcyBf0AsARlb7gtLEnKIFwWSe1NXVA-P62bGaYakQ_SuWvKdqPIYDzW4OcejiRLA2-VaW1PMPw1mGwHJ",
+                    "EP81jr58x88e9DGoflf0tt-jQ68I1-jXmvzbu1MhFsaXzPe63-TQpU7ulyTVi-zlW_oSiTdeDOYqR10D",
                   components: "buttons",
                   currency: "EUR",
                   locale: "es_ES",
@@ -102,7 +103,7 @@ export default function BuyNowButton({
                         {
                           amount: {
                             currency_code: "EUR",
-                            value: "12.00",
+                            value: `${pricePP}`,
                           },
                         },
                       ],
