@@ -151,7 +151,6 @@ export default function Navbar() {
             <DarkModeButton />
             <Link
               href="/solicitar-turno"
-              prefetch
               className="ml-8 inline-flex animate-bounce items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-white/60 px-4 py-2 text-base font-medium text-gray-500 shadow-sm hover:border-gray-500 hover:bg-white hover:text-gray-500 dark:bg-green-200 dark:text-gray-500 dark:hover:bg-green-300 dark:hover:text-white"
             >
               Solicitar turno
@@ -247,7 +246,6 @@ export default function Navbar() {
                   onClick={() => close()}
                 >
                   <Link
-                    prefetch
                     href="/solicitar-turno"
                     className="flex w-full items-center justify-center rounded-md border  border-transparent bg-green-200 px-4 py-2 text-base font-medium text-gray-700 shadow-sm "
                   >
