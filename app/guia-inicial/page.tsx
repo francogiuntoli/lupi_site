@@ -1,4 +1,5 @@
 import BuyNowButton from "../../components/BuyNowButton";
+import Notification from "../../components/Notification";
 
 export default function GuiaInicial() {
   return (
@@ -44,9 +45,11 @@ export default function GuiaInicial() {
           priceMP={1750}
           pricePP={12}
           message={"La quiero!"}
+          href="https://drive.google.com/uc?id=1DRFJxpy4P13NdHB1lPWocOlaOCRVgTk3&export=download"
           redirectUrl="guia-inicial"
         />
       </div>
+      <Notification />
     </div>
   );
 }
