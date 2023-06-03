@@ -42,7 +42,7 @@ export default function GuiaInicial() {
       <div className="mx-auto mt-2 w-min min-w-max">
         <BuyNowButton
           id="Guía Inicial"
-          priceMP={100}
+          priceMP={150}
           pricePP={10}
           message={"MercadoPago"}
           href="https://drive.google.com/uc?id=1Qh3k4Xp_bP8ewafr8OIzX2gT5OB6oznJ&export=download"
