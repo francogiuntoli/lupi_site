@@ -4,14 +4,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 import mercadopago from "mercadopago";
 
 mercadopago.configure({
-    access_token: process.env.MP_ACCESS_TOKEN!,
+    access_token: process.env.NEXT_MP_ACCESS_TOKEN!,
 });
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === "POST") {
         const product = req.body.product;
 
-        const URL = `https://www.marconinutricion.com/`
+        const URL = `https://www.marconinutricion.com`
         const redirectURL = `https://www.marconinutricion.com/${[product.redirectUrl]}`;
 
 

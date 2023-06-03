@@ -10,16 +10,16 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
 
     const topic = query.topic || query.type;
+    // console.log({ query, topic });
 
     try {
         if (topic === "payment") {
             const paymentId = query.id || query["data.id"];
             let payment = await mercadopago.payment.findById(Number(paymentId));
+
             let paymentStatus = payment.body.status;
 
-            if (paymentStatus === "approved") {
-                setWithExpiry(`guia-inicial`, 3600000);
-            }
+            // console.log([payment, paymentStatus]);
         }
     } catch (error) {
         res.send(error);
@@ -27,11 +27,3 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 export default handler;
-
-function setWithExpiry(key: string, ttl: number) {
-    const now = new Date();
-    const item = {
-        expiry: now.getTime() + ttl,
-    };
-    localStorage.setItem(key, JSON.stringify(item));
-}

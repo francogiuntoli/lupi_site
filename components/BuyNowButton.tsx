@@ -31,6 +31,20 @@ export default function BuyNowButton({
   const product = { id, price, redirectUrl };
 
   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get("status");
+    const payment_id = urlParams.get("payment_id");
+
+    if (
+      status === "approved" &&
+      payment_id !== null &&
+      getWithExpiry(`${redirectUrl}`) == null
+    ) {
+      setWithExpiry(`${redirectUrl}`, 3600000);
+    }
+  }, []);
+
+  useEffect(() => {
     setLoading(true);
     setDownloadable(() => {
       if (typeof getWithExpiry(`${redirectUrl}`) === "number") {
@@ -52,6 +66,7 @@ export default function BuyNowButton({
         setLoading(true);
       }
     };
+
     if (!downloadable) {
       generateLink();
     }
