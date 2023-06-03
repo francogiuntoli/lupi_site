@@ -37,8 +37,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 },
                 auto_return: "approved",
                 back_urls: {
-                    success: `${URL}`,
-                    failure: `${URL}`,
+                    success: URL,
+                    failure: URL,
                 },
                 notification_url: `${URL}/api/notify`,
             };

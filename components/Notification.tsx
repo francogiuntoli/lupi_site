@@ -56,7 +56,7 @@ export default function Notification() {
               height={25}
             />
           </div>
-          <p className="rounded-r-md bg-[#2f3032] p-4 font-semibold">
+          <p className="rounded-r-md border-2 border-green-200 bg-green-200/20 p-4 font-semibold dark:bg-[#2f3032]">
             {notification.content}
           </p>
         </div>

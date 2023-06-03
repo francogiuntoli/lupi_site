@@ -26,14 +26,19 @@ export default function BuyNowButton({
 }: BuyNowButtonProps) {
   const [urlMP, setUrlMP] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
-  const [downloadable, setDownloadable] = useState<boolean>(
-    typeof getWithExpiry(`${redirectUrl}`) === "number" ?? false
-  );
+  const [downloadable, setDownloadable] = useState<boolean>(false);
 
   const product = { id, price, redirectUrl };
 
   useEffect(() => {
     setLoading(true);
+    setDownloadable(() => {
+      if (typeof getWithExpiry(`${redirectUrl}`) === "number") {
+        return true;
+      } else {
+        return false;
+      }
+    });
 
     const generateLink = async () => {
       try {
@@ -47,13 +52,19 @@ export default function BuyNowButton({
         setLoading(true);
       }
     };
-    if (!downloadable) generateLink();
+    if (!downloadable) {
+      generateLink();
+    }
   }, []);
 
   return (
     <div>
       <div className="my-2 flex gap-4">
-        <div className="flex flex-col items-center gap-2">
+        <div
+          className={`flex flex-col items-center gap-2 ${
+            downloadable ? "hidden" : ""
+          }`}
+        >
           <div>Argentina</div>
           <div>
             {loading && downloadable ? (
@@ -83,25 +94,30 @@ export default function BuyNowButton({
             )}
           </div>
         </div>
-        <div className="block h-[100px] w-[0.5px] bg-gray-200 dark:bg-green-200/[10%]"></div>
-        <div className="flex flex-col items-center gap-4">
+        <div
+          className={`block h-[100px] w-[0.5px] bg-gray-200 dark:bg-green-200/[10%] ${
+            downloadable ? "hidden" : ""
+          }`}
+        ></div>
+        <div
+          className={`flex flex-col items-center gap-4 ${
+            downloadable ? "hidden" : ""
+          }`}
+        >
           <div>Resto del Mundo</div>
-          <div>
-            <div className="h-[40px] w-[150px] rounded-full bg-transparent shadow-xl dark:shadow-2xl dark:shadow-white/50">
+          <div className="bg-transparent">
+            <div className="h-[40px] w-[150px] rounded-full shadow-xl dark:shadow-2xl dark:shadow-white/50">
               <PayPalScriptProvider
                 options={{
                   "client-id":
-                    "AcyBf0AsARlb7gtLEnKIFwWSe1NXVA-P62bGaYakQ_SuWvKdqPIYDzW4OcejiRLA2-VaW1PMPw1mGwHJ",
-                  components: "buttons",
+                    "AV0dzhaktFA-C7UfH34n2z3AndhZymp9i48jd9nBRh3eHNWhKUxqbnUso5KN2qcM9d63P8ZaDWBfoxcW",
                   currency: "EUR",
                   locale: "es_ES",
                 }}
               >
                 <PayPalButtons
-                  disabled={downloadable}
                   style={{
                     layout: "horizontal",
-                    label: "pay",
                     shape: "pill",
                     height: 40,
                   }}
@@ -134,12 +150,24 @@ export default function BuyNowButton({
       </div>
       <div className="flex justify-center">
         {downloadable ? (
-          <button
-            onClick={() => handleDownload(href)}
-            className="mt-2 flex animate-bounce select-none justify-center rounded-full bg-green-200/60 px-8 py-2 font-medium text-gray-500 shadow-xl hover:border-gray-500 hover:bg-green-200 hover:text-gray-500 dark:bg-green-200 dark:text-gray-500 dark:shadow-2xl dark:shadow-white/50 dark:hover:bg-green-300/50 dark:hover:text-white"
-          >
-            <AiOutlineDownload size={35} />
-          </button>
+          <>
+            <div
+              className={`flex flex-col items-center gap-4 ${
+                downloadable ? "" : "hidden"
+              }`}
+            >
+              <div className="-mb-4 p-0 text-2xl">Download </div>
+              <div className="text-sm text-gray-500">
+                (Expira luego de 60 minutos)
+              </div>
+              <button
+                onClick={() => handleDownload(href)}
+                className="mt-2 flex animate-bounce select-none justify-center rounded-full bg-green-200/60 px-8 py-2 font-medium text-gray-500 shadow-xl hover:border-gray-500 hover:bg-green-200 hover:text-gray-500 dark:bg-green-200 dark:text-gray-500 dark:shadow-2xl dark:shadow-white/50 dark:hover:bg-green-300/50 dark:hover:text-white"
+              >
+                <AiOutlineDownload size={35} />
+              </button>
+            </div>
+          </>
         ) : null}
       </div>
     </div>
