@@ -11,7 +11,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === "POST") {
         const product = req.body.product;
 
-        const URL = `https://www.marconinutricion.com/${[product.redirectUrl]}`;
+        const URL = `https://www.marconinutricion.com/`
+        const redirectURL = `https://www.marconinutricion.com/${[product.redirectUrl]}`;
 
 
         try {
@@ -37,8 +38,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 },
                 auto_return: "approved",
                 back_urls: {
-                    success: URL,
-                    failure: URL,
+                    success: `${redirectURL}`,
+                    failure: `${redirectURL}`,
                 },
                 notification_url: `${URL}/api/notify`,
             };
