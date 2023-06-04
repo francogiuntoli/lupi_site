@@ -44,7 +44,9 @@ export default function GuiaInicial() {
           priceMP={1750}
           pricePP={12}
           message={"MercadoPago"}
-          href="https://drive.google.com/uc?id=1Qh3k4Xp_bP8ewafr8OIzX2gT5OB6oznJ&export=download"
+          href={
+            process.env.NEXT_GD_GUIA_INICIAL || process.env.GD_GUIA_INICIAL!
+          }
           redirectUrl="guia-inicial"
         />
       </div>
