@@ -150,8 +150,9 @@ export default function Navbar() {
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <DarkModeButton />
             <Link
-              href="/solicitar-turno"
-              className="ml-8 inline-flex animate-bounce items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-white/60 px-4 py-2 text-base font-medium text-gray-500 shadow-sm hover:border-gray-500 hover:bg-white hover:text-gray-500 dark:bg-green-200 dark:text-gray-500 dark:hover:bg-green-300 dark:hover:text-white"
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=34604287070&text=Hola!%20Me%20gustar%C3%ADa%20adquirir%20un%20turno%20para%20primera%20consulta"
+              className="ml-8 inline-flex animate-bounce select-none items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-white/75 px-4 py-2 text-base font-medium text-gray-500 shadow-sm hover:border-gray-500 hover:bg-white hover:text-gray-500 dark:bg-green-200 dark:text-gray-500 dark:hover:bg-green-300/50 dark:hover:text-white"
             >
               Solicitar turno
             </Link>
@@ -246,8 +247,9 @@ export default function Navbar() {
                   onClick={() => close()}
                 >
                   <Link
-                    href="/solicitar-turno"
-                    className="flex w-full items-center justify-center rounded-md border  border-transparent bg-green-200 px-4 py-2 text-base font-medium text-gray-700 shadow-sm "
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=34604287070&text=Hola!%20Me%20gustar%C3%ADa%20adquirir%20un%20turno%20para%20primera%20consulta"
+                    className="flex w-full select-none items-center justify-center rounded-md border border-transparent bg-green-200 px-4 py-2 text-base font-medium text-gray-700 shadow-sm "
                   >
                     Solicitar turno
                   </Link>
