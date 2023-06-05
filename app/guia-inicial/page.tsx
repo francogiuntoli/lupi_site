@@ -45,7 +45,7 @@ export default function GuiaInicial() {
           pricePP={12}
           message={"MercadoPago"}
           href={
-            process.env.NEXT_GD_GUIA_INICIAL || process.env.GD_GUIA_INICIAL!
+            process.env.GD_GUIA_INICIAL || process.env.NEXT_GD_GUIA_INICIAL!
           }
           redirectUrl="guia-inicial"
         />
