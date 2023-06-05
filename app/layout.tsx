@@ -15,8 +15,10 @@ export default function RootLayout({
       <body className="flex min-h-[98vh] flex-col justify-between  dark:bg-zinc-900">
         <Providers>
           <Header />
-          <div>{children}</div>
-          <Analytics />
+          <div>
+            {children}
+            <Analytics />
+          </div>
           <Footer />
         </Providers>
       </body>
