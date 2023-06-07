@@ -28,11 +28,17 @@ export default function GuiaInicial() {
               Precios:
             </h1>
             <ul className="mt-4 font-semibold text-gray-700 dark:text-white ">
-              <li>Argentina: $1750 ARS</li>
+              <li>
+                Argentina: <s className="text-sm text-red-300">$1750</s> $1500
+                ARS
+              </li>
               <li>Se realiza el pago via MercadoPago</li>
             </ul>
             <ul className="my-4 font-semibold text-gray-700 dark:text-white ">
-              <li>Resto del mundo: €12 EUR</li>
+              <li>
+                Resto del mundo: <s className="text-sm text-red-300">€12</s> €10
+                EUR
+              </li>
               <li>Se realiza el pago via Paypal</li>
             </ul>
           </ul>
@@ -41,8 +47,8 @@ export default function GuiaInicial() {
       <div className="mx-auto mt-2 w-min min-w-max">
         <BuyNowButton
           id="Guía Inicial"
-          priceMP={1750}
-          pricePP={12}
+          priceMP={1500}
+          pricePP={10}
           message={"MercadoPago"}
           href={
             process.env.GD_GUIA_INICIAL || process.env.NEXT_GD_GUIA_INICIAL!
